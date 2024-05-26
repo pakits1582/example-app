@@ -1,7 +1,7 @@
 <div class="flex flex-col bg-indigo-900 w-full h-screen"
     x-data="{ 
-        showSubscribe: true,
-        showSuccess: true
+        showSubscribe: false,
+        showSuccess: false
     }"
 >
     <nav class="flex pt-5 justify-between container mx-auto text-indigo-200 px-24">
@@ -34,10 +34,10 @@
         >
             <x-text-input
                 class="px-5 py-3 w-80 border border-blue-400"
+                wire:model="email"
                 type="email"
                 name="email"
                 placeholder="Email address"
-                wire:model="email"
             ></x-text-input>
             <span class="text-gray-100 text-xs">We will send you a confirmation email.</span>
             <x-primary-button
